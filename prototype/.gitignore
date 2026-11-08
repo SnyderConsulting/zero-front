@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+*.zip
+.sites/
+__pycache__/
+.tmp/

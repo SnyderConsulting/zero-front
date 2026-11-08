@@ -1,0 +1,24 @@
+{
+  "name": "zero-front",
+  "version": "0.2.0",
+  "private": true,
+  "productName": "Zero Front",
+  "main": "desktop/main.cjs",
+  "type": "module",
+  "description": "Zero Front: an agent-first FPS research environment with deterministic simulation and software rendering.",
+  "scripts": {
+    "start": "node desktop/launch.mjs",
+    "dev": "node desktop/launch.mjs",
+    "web": "node server.mjs",
+    "postinstall": "node node_modules/electron/install.js",
+    "test": "node --test",
+    "train": "python training/train.py",
+    "evaluate": "node training/evaluate.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "electron": "45.2.3"
+  }
+}

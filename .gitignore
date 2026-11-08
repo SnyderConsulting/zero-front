@@ -1,0 +1,42 @@
+# Dependencies and local tool state
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.openai/
+.sites/
+.agents/
+.codex/
+.tmp/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+
+# Training output stays local; only the playable policy snapshot is bundled.
+/prototype/training/runs/
+/prototype/training/results/
+/prototype/models/*
+!/prototype/models/pixel-selfplay.json
+!/prototype/models/README.md
+*.log
+*.partial
+*.tmp
+*.npz
+*.npy
+*.pt
+*.pth
+*.safetensors
+*.zip
+
+# Historical development screenshots; keep the current Zero Front preview.
+/arena-preview.jpg
+/model-selection.png
+/procedural-map-variety.png
+/procedural-maps.png
+/procedural-views.png
+/round-replay.png
+/round-summary.png
+/round-timer.png

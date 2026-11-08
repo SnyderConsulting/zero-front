@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172322">
+  <meta name="description" content="Zero Front: a first-person team deathmatch environment for humans and learning agents.">
+  <title>Zero Front — Team Deathmatch</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./post-round.css">
+  <link rel="stylesheet" href="./replay-view.css">
+</head>
+<body>
+  <main id="game">
+    <canvas id="viewport" width="320" height="180" tabindex="0" aria-label="Zero Front first-person team deathmatch"></canvas>
+    <div id="hud" aria-label="Match status">
+      <div class="scoreboard"><span class="team blue"><span>BLUE</span><strong id="blue-score">0</strong></span><span class="match-info"><span class="match-target" id="match-target">FIRST TO 25</span><span id="round-timer" role="timer" aria-label="Round time remaining" aria-live="off">3:00</span></span><span class="team red"><strong id="red-score">0</strong><span>RED</span></span></div>
+      <div class="vitals"><span class="health"><span aria-hidden="true">+</span> <strong id="health">100</strong></span><span class="ammo"><strong id="ammo">20</strong><small id="ammo-total">/ 20</small></span></div>
+      <p id="reload-hint" hidden>R TO RELOAD</p>
+      <p id="controls-hint">WASD move · Mouse / arrows aim · LMB / Space fire · R reload · Esc pause</p>
+    </div>
+    <div id="damage" aria-hidden="true"></div>
+    <div id="respawn" hidden><strong>ELIMINATED</strong><span id="respawn-count">Respawning in 2</span></div>
+    <section id="menu" aria-label="Match menu">
+      <div class="menu-content">
+        <p class="eyebrow">TEAM DEATHMATCH</p>
+        <h1 id="menu-title">ZERO FRONT</h1>
+        <p id="menu-subtitle">You're blue. First team to 25 wins.</p>
+        <div id="round-config">
+          <label class="team-select" for="team-size">Teams<select id="team-size"><option value="1">1 vs 1</option><option value="2">2 vs 2</option><option value="3">3 vs 3</option><option value="4" selected>4 vs 4</option><option value="5">5 vs 5</option><option value="6">6 vs 6</option><option value="7">7 vs 7</option><option value="8">8 vs 8</option></select></label>
+          <label class="model-select" for="blue-model">Blue bots<select id="blue-model"><option value="scripted">Scripted</option></select></label>
+          <label class="model-select" for="red-model">Red bots<select id="red-model"><option value="scripted">Scripted</option></select></label>
+          <div class="model-actions"><button id="import-model" class="secondary" type="button">Import model…</button><button id="refresh-models" class="secondary" type="button">Refresh</button></div>
+          <input id="model-file" type="file" accept=".json,application/json" hidden>
+          <p id="model-status" role="status" hidden></p>
+        </div>
+        <button id="play">Play</button>
+        <button id="new-match" class="secondary" hidden>New match</button>
+        <p class="menu-controls">WASD move · Mouse / arrows aim<br>LMB / Space fire · R reload · Esc pause</p>
+        <p class="bot-note">You + bot teammates against bots</p>
+      </div>
+    </section>
+    <div class="touch-controls"><div><button data-control="left" aria-label="Strafe left">←</button><button data-control="forward" aria-label="Move forward">↑</button><button data-control="back" aria-label="Move backward">↓</button><button data-control="right" aria-label="Strafe right">→</button></div><div><button data-control="turnLeft" aria-label="Aim left">↶</button><button data-control="fire">FIRE</button><button data-control="turnRight" aria-label="Aim right">↷</button><button data-control="reload" aria-label="Reload">R</button></div></div>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

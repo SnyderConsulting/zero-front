@@ -1,0 +1,35 @@
+.post-round{position:absolute;inset:0;z-index:20;background:#12211ff7;color:#edf1e7;font-variant-numeric:tabular-nums;overflow:hidden}
+.post-round[hidden],.post-round [hidden]{display:none!important}
+.round-results{width:min(1040px,100%);height:100%;margin:auto;padding:28px 32px 24px;display:flex;flex-direction:column;gap:22px;min-height:0}
+.round-results-header{text-align:center;flex:none}
+.round-eyebrow{margin:0 0 8px;color:#91aea3;font-size:10px;letter-spacing:3.5px;text-transform:uppercase}
+.round-result-title{margin:0;font-size:39px;line-height:1.15;letter-spacing:3px;font-weight:800;outline:none}
+.round-final-score{display:flex;justify-content:center;align-items:center;gap:24px;margin:13px 0 10px}
+.round-team-score{display:flex;align-items:center;gap:16px}.round-team-score>span{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:650}.round-team-score strong{font-size:42px;line-height:1;font-weight:700}
+.round-score-divider{color:#648075;font-size:22px}.round-blue{color:#73cce2}.round-red{color:#f08776}
+.round-meta{margin:0;color:#a2b9ad;font-size:12px;line-height:1.6}
+.round-teams{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0}
+.round-team-panel{display:flex;flex-direction:column;min-width:0;min-height:0;border:1px solid #536f5d55;border-radius:5px;background:#192d26}
+.round-team-heading{margin:0;padding:14px 16px 11px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:650;border-bottom:1px solid #536f5d55}
+.round-roster-scroll{overflow:auto;min-height:0;flex:1;scrollbar-color:#4b6a5a #192d26;scrollbar-width:thin}
+.round-roster-scroll:focus-visible{outline:2px solid #9ddbcc;outline-offset:-3px}
+.round-roster{width:100%;border-collapse:collapse;color:#d7e2d7;text-align:right;font-size:13px}
+.round-roster th,.round-roster td{padding:10px 13px;border-bottom:1px solid #536f5d33;white-space:nowrap}
+.round-roster thead th{position:sticky;top:0;z-index:1;background:#1b3029;color:#8fa99b;font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:500}
+.round-roster th:first-child{text-align:left;width:100%}.round-roster tbody th{font-size:12px;letter-spacing:.3px;font-weight:500}
+.round-roster tr:last-child>*{border-bottom:0}.round-roster .round-player-you{background:#29463a}.round-roster .round-player-you>th{font-weight:750;box-shadow:inset 3px 0 #a4cfad;color:#edf7e9}
+.round-number{font-size:17px;font-weight:600}.round-accuracy{min-width:86px}.round-accuracy span{display:block;font-size:13px}.round-accuracy small{display:block;color:#89a394;font-size:10px;line-height:1.6}
+.round-actions{display:flex;justify-content:center;gap:12px;flex:none;padding-top:2px}
+.round-button{border:1px solid #66827199;border-radius:4px;padding:11px 19px;min-height:42px;font:600 13px "Segoe UI",Arial,sans-serif;cursor:pointer;white-space:nowrap;transition:background .12s,color .12s}
+.round-primary{background:#a4cfad;color:#172d21;border-color:#a4cfad;min-width:180px}.round-primary:hover{background:#c0e1bf;border-color:#c0e1bf}
+.round-secondary{background:#20372e;color:#cee0cf}.round-secondary:hover{background:#304f40;color:#f1f7ed}.round-button:focus-visible{outline:2px solid #c5ead1;outline-offset:3px}.round-button:disabled{opacity:.4;cursor:default}
+.round-replay-pane{height:100%;display:flex;flex-direction:column;min-height:0}
+.round-replay-header{padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex:none;border-bottom:1px solid #536f5d55;background:#142720}
+.round-replay-header h2{margin:0;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;color:#b9cebf}
+.round-replay-header .round-button{padding:8px 13px;min-height:35px;font-size:12px}
+.round-replay-host{flex:1;min-height:0;min-width:0;overflow:hidden;padding:16px 20px 18px}
+.round-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-height:650px){.round-results{padding:18px 24px 16px;gap:14px}.round-result-title{font-size:30px}.round-eyebrow{margin-bottom:4px}.round-final-score{margin:9px 0 6px;gap:18px}.round-team-score strong{font-size:34px}.round-roster th,.round-roster td{padding:8px 12px}.round-team-heading{padding:10px 13px;font-size:11px}}
+@media(max-width:700px){.round-results{padding:20px 16px 16px;gap:16px;overflow-y:auto}.round-teams{grid-template-columns:1fr;flex:none;gap:16px}.round-team-panel{max-height:380px;min-height:160px}.round-actions{position:sticky;bottom:-16px;padding:12px 0 16px;background:#12211ff5;z-index:2;margin-bottom:-16px}.round-results-header{padding-bottom:1px}.round-result-title{font-size:30px}.round-meta{font-size:11px}.round-replay-header{padding:10px 12px;gap:8px}.round-replay-header h2{font-size:10px;letter-spacing:1px}.round-replay-header .round-button{font-size:11px;padding:8px 10px}.round-replay-host{padding:10px 12px 12px}}
+@media(max-width:400px){.round-team-score{gap:10px}.round-team-score>span{font-size:10px}.round-final-score{gap:15px}.round-actions{gap:8px}.round-actions .round-button{min-width:0;flex:1;padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){.round-button{transition:none}}
